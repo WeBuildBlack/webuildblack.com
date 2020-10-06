@@ -1,7 +1,7 @@
-@import 'libs/vars';
-@import 'libs/functions';
-@import 'libs/mixins';
-@import 'libs/skel';
+@import "libs/vars";
+@import "libs/functions";
+@import "libs/mixins";
+@import "libs/skel";
 
 .About {
   min-height: 100vh;
@@ -11,7 +11,7 @@
   font-family: _font(family-display);
   font-size: 3em;
 
-  @include breakpoint-before('960px') {
+  @include breakpoint-before("960px") {
     font-size: 2em;
   }
 }
@@ -21,11 +21,11 @@
   background: _palette(accent6);
   padding: 6em;
 
-  @include breakpoint-before('768px') {
+  @include breakpoint-before("768px") {
     padding: 6%;
   }
 
-  @include breakpoint-before('600px') {
+  @include breakpoint-before("600px") {
     padding: 40px 20px;
   }
 }
@@ -38,11 +38,11 @@
   padding: 4em 6em;
   background: black;
 
-  @include breakpoint-before('960px') {
+  @include breakpoint-before("960px") {
     padding: 6%;
   }
 
-  @include breakpoint-before('768px') {
+  @include breakpoint-before("768px") {
     padding: 3em 40px;
     text-align: left;
 
@@ -51,7 +51,7 @@
     }
   }
 
-  @include breakpoint-before('600px') {
+  @include breakpoint-before("600px") {
     padding: 2em 20px;
   }
 }
@@ -62,7 +62,7 @@
   justify-content: space-between;
   align-items: flex-end;
 
-  @include breakpoint-before('768px') {
+  @include breakpoint-before("768px") {
     text-align: left;
   }
 }
@@ -74,7 +74,7 @@
   line-height: 1.35;
   width: 40vw;
 
-  @include breakpoint-before('960px') {
+  @include breakpoint-before("960px") {
     font-size: 2.5em;
   }
 }
@@ -86,11 +86,11 @@
   margin-left: 4em;
   margin-bottom: -2em;
 
-  @include breakpoint-before('960px') {
+  @include breakpoint-before("960px") {
     display: block;
   }
 
-  @include breakpoint-before('960px') {
+  @include breakpoint-before("960px") {
     margin-bottom: 0;
   }
 }
@@ -100,7 +100,7 @@
   justify-content: space-between;
   align-items: flex-start;
 
-  @include breakpoint-before('768px') {
+  @include breakpoint-before("768px") {
     display: block;
   }
 }
@@ -108,12 +108,12 @@
 .IntroTextWrapper {
   width: 40vw;
 
-  @include breakpoint-before('768px') {
+  @include breakpoint-before("768px") {
     width: 100%;
     margin-top: 2em;
   }
 
-  @include breakpoint-before('600px') {
+  @include breakpoint-before("600px") {
     margin-top: 2em;
   }
 }
@@ -122,7 +122,7 @@
   font-size: 1.25em;
   margin-bottom: 1em;
 
-  @include breakpoint-before('768px') {
+  @include breakpoint-before("768px") {
     font-size: 1em;
   }
 }
@@ -132,11 +132,11 @@
   width: 40vw;
   margin: 7em 0 2em 4em;
 
-  @include breakpoint-before('960px') {
+  @include breakpoint-before("960px") {
     margin: 4em 0 0;
   }
 
-  @include breakpoint-before('768px') {
+  @include breakpoint-before("768px") {
     height: calc(100vw * 0.5625 - 40px);
     width: 100%;
     margin: 2em 0 0;
@@ -172,7 +172,7 @@
     }
   }
 
-  @include breakpoint-before('768px') {
+  @include breakpoint-before("768px") {
     p {
       font-size: 1em;
     }
@@ -186,11 +186,11 @@
   background: _palette(accent6);
   padding: 6em;
 
-  @include breakpoint-before('768px') {
+  @include breakpoint-before("768px") {
     padding: 6%;
   }
 
-  @include breakpoint-before('600px') {
+  @include breakpoint-before("600px") {
     padding: 40px 20px;
   }
 }
@@ -257,13 +257,17 @@
   .SectionHeading {
     margin: 0;
   }
+
+  @include breakpoint-before("768px") {
+    text-align: left;
+  }
 }
 
 .ActionContent {
   font-size: 2em;
   margin: 0;
 
-  @include breakpoint-before('768px') {
+  @include breakpoint-before("768px") {
     font-size: 1.25em;
   }
 }
