@@ -1,38 +1,38 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Img from 'gatsby-image'
-import { graphql } from 'gatsby'
-import className from 'classnames'
+import React from "react";
+import Helmet from "react-helmet";
+import Img from "gatsby-image";
+import { graphql } from "gatsby";
+import className from "classnames";
 
-import { PageContainer } from '../../components'
+import { PageContainer } from "../../components";
 
-import styles from '../../assets/scss/partner.module.scss'
+import styles from "../../assets/scss/partner.module.scss";
 
 export default function Partner({ data }) {
-  const fullWidthImage = data.allFile.nodes.find(node =>
-    node.childImageSharp.fluid.src.includes('swag')
-  )
+  const fullWidthImage = data.allFile.nodes.find((node) =>
+    node.childImageSharp.fluid.src.includes("swag")
+  );
 
-  const partnerLogos = data.allFile.nodes.filter(node =>
-    node.childImageSharp.fluid.src.includes('logo')
-  )
+  const partnerLogos = data.allFile.nodes.filter((node) =>
+    node.childImageSharp.fluid.src.includes("logo")
+  );
 
   const logoMarkup = partnerLogos
     .sort((a, b) => {
-      const img1 = a.childImageSharp.fluid.originalName.toUpperCase()
-      const img2 = b.childImageSharp.fluid.originalName.toUpperCase()
+      const img1 = a.childImageSharp.fluid.originalName.toUpperCase();
+      const img2 = b.childImageSharp.fluid.originalName.toUpperCase();
 
       if (img1 < img2) {
-        return -1
+        return -1;
       }
       if (img1 > img2) {
-        return 1
+        return 1;
       }
 
       // names must be equal
-      return 0
+      return 0;
     })
-    .map(logo => (
+    .map((logo) => (
       <div className={styles.LogoWrapper}>
         <Img
           className={styles.Logo}
@@ -40,7 +40,7 @@ export default function Partner({ data }) {
           alt=""
         />
       </div>
-    ))
+    ));
 
   return (
     <PageContainer>
@@ -135,11 +135,11 @@ export default function Partner({ data }) {
                   Internship/Apprenticeship Program
                 </dt>
                 <dd className={styles.BenchmarkDescription}>
-                  {`A large number of the Black community coming into tech are coming in at the ground level. Historically, entry-level job opportunities have been reserved for those with a CS degree. Internships bridge the experience gap for less traditional candidates.`}
+                  {`A large number of the Black community coming into tech are coming in at the ground level. Historically, entry-level job opportunities have been reserved for those with a CS degree. Open internships bridge the experience gap for less traditional candidates.`}
                 </dd>
                 <dt className={styles.BenchmarkName}>Mentorship Program</dt>
                 <dd className={styles.BenchmarkDescription}>
-                  {`A big aspect of D&I work is not only hiring but retaining that diverse talent. Structured mentorship programs give employees a guiding hand in navigating their careers. Successful mentorship leads to increased morale,  productivity, upward mobility.`}
+                  {`A big aspect of D&I work is not only hiring but retaining that diverse talent. Structured mentorship programs give employees a guiding hand in navigating their careers. Successful mentorship leads to increased morale,  productivity, and upward mobility.`}
                 </dd>
               </dl>
             </section>
@@ -155,7 +155,7 @@ export default function Partner({ data }) {
             {`Let's make the tech industry better together`}
           </h2>
           <a
-            className={className('button', styles.PartnerFormLink)}
+            className={className("button", styles.PartnerFormLink)}
             href="/make-an-impact/partner/apply"
             target="_blank"
             rel="noreferrer"
@@ -165,7 +165,7 @@ export default function Partner({ data }) {
         </div>
       </main>
     </PageContainer>
-  )
+  );
 }
 
 export const query = graphql`
@@ -181,4 +181,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
