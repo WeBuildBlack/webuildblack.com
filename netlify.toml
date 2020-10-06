@@ -1,7 +1,29 @@
-[build]
-  publish = "public"
-  command = "npm run build"
-  functions = "lambda"
-[build.environment]
-  YARN_VERSION = "1.9.4"
-  YARN_FLAGS = "--no-ignore-optional"
+[[redirects]]
+  from = "/get-involved/programs/bounty-board"
+  to = "https://forms.gle/DpLFYmSGTJPDWbuJ7"
+  status = 200
+
+[[redirects]]
+  from = "/get-involved/slack"
+  to = "https://t.co/Tyqbn7FNyv?amp=1"
+  status = 200
+
+[[redirects]]
+  from = "/make-an-impact/hire"
+  to = "https://forms.gle/oyrHZRy15A4sQYgK8"
+  status = 200
+
+[[redirects]]
+  from = "/make-an-impact/partner/apply"
+  to = "https://forms.gle/2qnrc8EWatZKH6xJ9"
+  status = 200
+
+[[redirects]]
+  from = "/make-an-impact/volunteer"
+  to = "https://forms.gle/fPr33dk5V9YJzGxr8"
+  status = 200
+
+[[redirects]]
+  from = "/subscribe"
+  to = "https://webuildblack.us14.list-manage.com/subscribe?u=0b4ea00684996f451777beeb0&id=deb148f597"
+  status = 200

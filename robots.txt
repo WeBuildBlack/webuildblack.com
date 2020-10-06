@@ -1,0 +1,36 @@
+________________________
+* Sitemap outline (WIP) *
+
+home => /
+about => /about
+contact-us =>
+  partner => /partner
+  donate => /donate
+  hire => /hire
+  volunteer => /volunteer
+events =>
+  Mavens I/O => /events/mavens-conference
+  BSENYC => /events/meetups/black-software-engineers-of-nyc
+  SBB => /events/meetups/she-builds-black
+  archive =>
+    The Build Up => /events/archive/the-build-up
+programs =>
+  Bounty Board => /programs/bounty-board
+  archive =>
+    BuildNG => /programs/archive/build-next-gen
+    Ingenious Thought => /programs/archive/ingenious-thought
+
+_______________________
+* v2 *
+
+membership => /membership (/members? /join? tbd...)
+
+________________________
+* Layouts *
+
+home
+about
+detail => programs, events
+hybrid (detail + form) => partner, volunteer, hire
+form => contact, donate
+

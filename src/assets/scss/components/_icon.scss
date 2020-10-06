@@ -1,0 +1,41 @@
+///
+/// Forty by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Icon */
+
+.icon {
+  @include icon;
+  border-bottom: none;
+  position: relative;
+  color: _palette(fg);
+  font-size: 2rem;
+  margin: 0 1rem;
+
+  > .label {
+    display: none;
+  }
+
+  @include breakpoint(medium) {
+    font-size: 1.5em;
+    margin: 0 0.5em;
+  }
+
+  @include breakpoint(small) {
+    margin: 0;
+  }
+}
+
+a.icon {
+  @include vendor('transition', 'color #{_duration(transition)} ease-in-out');
+
+  &:hover {
+    color: desaturate(darken(_palette(fg), 25), 5) !important;
+  }
+
+  &:active {
+    color: desaturate(darken(_palette(fg), 25), 5) !important;
+  }
+}

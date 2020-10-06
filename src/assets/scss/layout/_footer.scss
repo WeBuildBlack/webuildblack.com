@@ -1,0 +1,138 @@
+///
+/// Forty by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Footer */
+
+#footer {
+  z-index: 1;
+  background: _palette(fg-light);
+
+  .copyright {
+    font-size: 0.8em;
+    padding-left: 0;
+  }
+}
+
+.footer-main {
+  color: black;
+  padding: 3em;
+  display: flex;
+
+  @include breakpoint-before('600px') {
+    flex-direction: column;
+    padding: 2em 20px;
+  }
+}
+
+.footer-main h3 {
+  color: black;
+}
+
+.footer-left,
+.footer-right {
+  width: 100%;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+
+  @include breakpoint-after('768px') {
+    align-items: flex-start;
+  }
+
+  @include breakpoint-before('600px') {
+    flex-direction: row;
+  }
+}
+
+.footer-left-content {
+  flex: 1 1 auto;
+}
+
+.footer-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+
+  @include breakpoint-before('900px') {
+    flex-direction: column;
+  }
+}
+
+.footer-links li {
+  padding: 0;
+  margin-right: 2em;
+  cursor: pointer;
+  font-size: 1.35em;
+
+  @include breakpoint(small) {
+    font-size: 1.2em;
+  }
+}
+
+.footer-logo {
+  img {
+    width: 14em;
+    justify-self: end;
+
+    @include breakpoint(small) {
+      width: 8em;
+      margin-top: 4em;
+    }
+  }
+}
+
+.footer-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  @include breakpoint-before('600px') {
+    text-align: left;
+  }
+
+  input {
+    text-align: right;
+    color: white;
+
+    &:focus {
+      background-color: rgb(118, 118, 120);
+    }
+  }
+}
+
+.footer-end {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: _palette(accent3);
+  padding: 2em 4em;
+  color: _palette(text-light);
+
+  .icons {
+    margin: 0;
+  }
+
+  .copyright {
+    margin: 0;
+  }
+
+  @include breakpoint(small) {
+    flex-direction: column;
+    padding: 1.5em 20px;
+    justify-content: center;
+
+    .icons {
+      margin-bottom: 1em;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

@@ -1,0 +1,267 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+
+.Main {
+  color: _palette(text-dark);
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/*  Hero  */
+
+.Hero {
+  display: flex;
+  min-height: 100vh;
+
+  @include breakpoint-before('1024px') {
+    display: block;
+    min-height: unset;
+  }
+}
+
+.HeroContent {
+  max-width: 60%;
+  padding: 10em 9em 9em;
+  background: _palette(text-dark);
+  color: _palette(text-light);
+  position: relative;
+  z-index: 100;
+
+  @include breakpoint-before('1024px') {
+    width: 100%;
+    max-width: unset;
+  }
+
+  @include breakpoint-before('768px') {
+    padding: 32px 20px;
+  }
+}
+
+.HeroHeading {
+  font-size: 3em;
+  font-family: _font(family-display);
+  margin-bottom: 0.5em;
+
+  @include breakpoint-before('768px') {
+    font-size: 2em;
+  }
+}
+
+.HeroBody {
+  font-size: 1.5em;
+
+  @include breakpoint-before('768px') {
+    font-size: 1.25em;
+  }
+}
+
+.HeroImageWrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 100;
+}
+
+.HeroImageOverlay {
+  width: 100%;
+  height: 100%;
+  background-blend-mode: overlay;
+  background-image: linear-gradient(to right, #000000, transparent);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  z-index: 100;
+  margin-left: -1px;
+
+  @include breakpoint-before('1024px') {
+    margin-top: -1px;
+    margin-left: 0;
+    background-image: linear-gradient(to bottom, #000000, transparent);
+  }
+}
+
+.HeroImage {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+/*  Body  */
+
+.Body {
+  position: relative;
+  padding: 2em 6%;
+  background: _palette(text-light);
+  color: _palette(text-dark);
+  display: grid;
+  grid-template-areas: 'nav' 'content';
+
+  @include breakpoint-after('900px') {
+    grid-template-columns: 1fr 3fr;
+  }
+
+  @include breakpoint-before('768px') {
+    padding: 32px 20px;
+  }
+}
+
+.BodyHeading {
+  font-family: _font(family-display);
+}
+
+.BodyIntro {
+  font-size: 1.5em;
+
+  @include breakpoint-before('768px') {
+    font-size: 1.25em;
+  }
+}
+
+.BodyNav {
+  padding-top: 0.5em;
+
+  @include breakpoint-after('900px') {
+    position: sticky;
+    top: 70px;
+  }
+
+  @include breakpoint-before('900px') {
+    display: none;
+  }
+}
+
+.SectionList {
+  list-style: none;
+  margin: 0;
+  padding: 4em 0 0;
+
+  @include breakpoint-after('900px') {
+    position: sticky;
+    top: 70px;
+  }
+}
+
+.SectionListItem {
+  padding: 0 0 0.5em 0;
+  font-size: 1.2em;
+
+  &.visible {
+    border-left: solid black 2px;
+  }
+
+  a {
+    border: none;
+
+    &:hover {
+      color: _palette(text-dark) !important;
+      text-emphasis: bold;
+    }
+  }
+}
+
+.SectionAnchor {
+  padding: 2em;
+
+  @include breakpoint-before('900px') {
+    display: none;
+  }
+}
+
+.BodySection {
+  padding-top: 4em;
+  width: 100%;
+
+  @include breakpoint-before('600px') {
+    padding-top: 2em;
+  }
+}
+
+/* Benchmark section */
+
+.BenchmarkList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.BenchMarkItem {
+  padding-bottom: 2em;
+  background: green;
+}
+
+.BenchmarkName {
+  text-transform: uppercase;
+}
+
+.BenchmarkDescription {
+  margin: 0 0 2em 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Past sponsors section */
+
+.SponsorList {
+  padding-bottom: 4em;
+  height: auto;
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+}
+
+.LogoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.Logo {
+  height: auto;
+  width: 100%;
+
+  // Prevents Google's logo from being cut off on the left at certain breakpoints
+  img {
+    width: auto !important;
+    height: 100% !important;
+  }
+}
+
+/* Call to action block */
+
+.ActionSection {
+  background: _palette(highlight);
+  width: 100%;
+  padding: 6em 9em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @include breakpoint-before('768px') {
+    padding: 3em;
+  }
+
+  @include breakpoint-before('600px') {
+    padding: 2em;
+  }
+}
+
+.PartnerFormLink {
+  box-shadow: inset 0 0 0 2px _palette(text-dark) !important;
+  color: _palette(text-dark);
+
+  &:hover {
+    color: _palette(text-dark) !important;
+  }
+}

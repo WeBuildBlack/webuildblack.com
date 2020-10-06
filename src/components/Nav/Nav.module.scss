@@ -1,0 +1,381 @@
+@import '../../assets/scss/libs/vars';
+@import '../../assets/scss/libs/functions';
+@import '../../assets/scss/libs/mixins';
+@import '../../assets/scss/libs/skel';
+
+.Nav {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 150;
+  transition: display height ease-in-out 0.2s;
+  font-family: _font(family-body);
+
+  @include breakpoint-before('960px') {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @include breakpoint-before('960px') {
+    padding: 0;
+  }
+}
+
+.BrandWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  width: 100%;
+
+  @include breakpoint-before('960px') {
+    padding: 0.5em 1em 0.5em 0;
+  }
+}
+
+.BrandLink {
+  text-decoration: none;
+  border: 0;
+}
+
+.Logo {
+  width: 14em;
+  padding: 1em;
+
+  @include breakpoint-before('960px') {
+    width: 12em;
+  }
+}
+
+.Menu {
+  margin: 1em;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.2s ease-in-out;
+
+  @include breakpoint-before('960px') {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 1em;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &.open {
+      height: calc(100vh - 75px);
+      display: flex;
+    }
+  }
+}
+
+.MenuItem,
+.DropdownItem {
+  cursor: pointer;
+  margin-left: 1em;
+  padding-left: 0 !important;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include breakpoint-before('960px') {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    margin-bottom: 1em;
+  }
+}
+
+.MenuLink {
+  color: _palette(text-light);
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.75em 1em;
+  border: none;
+  display: block;
+  font-family: _font(family-body);
+  font-size: 1em !important;
+  background: none;
+  cursor: pointer;
+
+  &:focus {
+    color: _palette(highlight) !important;
+  }
+
+  @include breakpoint-after('960px') {
+    &:hover {
+      color: _palette(highlight) !important;
+    }
+  }
+
+  @include breakpoint-before('960px') {
+    width: 100%;
+  }
+}
+
+.DropdownItem {
+  position: relative;
+
+  &.active {
+    .DropdownButton {
+      background: _palette(highlight);
+      color: _palette(text-dark) !important;
+      border: 2px solid _palette(highlight);
+    }
+
+    .DropdownMenu:not(.SubDropdownMenu) {
+      display: block;
+    }
+
+    @include breakpoint-before('960px') {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
+.DropdownButton {
+  background: none;
+  position: relative;
+  padding: 0.75em 1em;
+  color: _palette(text-light);
+  border: 2px solid transparent;
+  line-height: 1em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: border 0.1s ease-in-out, color 0.1s ease-in-out,
+    background 0.1s ease-in-out;
+  font-family: _font(family-body);
+  font-size: 1em !important;
+  cursor: pointer;
+
+  &:focus {
+    background: _palette(highlight);
+    color: _palette(text-dark) !important;
+    border: 2px solid _palette(highlight);
+  }
+
+  @include breakpoint-after('960px') {
+    &:hover {
+      background: _palette(highlight);
+      color: _palette(text-dark) !important;
+      border: 2px solid _palette(highlight);
+    }
+  }
+
+  @include breakpoint-before('960px') {
+    width: 100%;
+  }
+}
+
+.DropdownMenu {
+  display: none;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: black;
+  border: 2px solid _palette(text-light);
+  z-index: 200;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  transition: display 0.1s ease-in;
+  width: 100%;
+
+  @include breakpoint-before('960px') {
+    position: relative;
+    top: 0;
+  }
+}
+
+.DropdownMenuItem {
+  padding-left: 0 !important;
+  width: 100%;
+  display: flex;
+
+  @include breakpoint-before('960px') {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.DropdownWrapper {
+  &:focus {
+    .DropdownButton {
+      background: _palette(highlight);
+      color: _palette(text-dark) !important;
+      border: 2px solid _palette(highlight);
+    }
+
+    .DropdownMenu:not(.SubDropdownMenu) {
+      display: block;
+    }
+
+    @include breakpoint-before('960px') {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  @include breakpoint-after('960px') {
+    &:hover {
+      .DropdownButton {
+        background: _palette(highlight);
+        color: _palette(text-dark) !important;
+        border: 2px solid _palette(highlight);
+      }
+
+      .DropdownMenu:not(.SubDropdownMenu) {
+        display: block;
+      }
+
+      @include breakpoint-before('960px') {
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.SubDropdownMenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
+.SubDropdownWrapper {
+  position: relative;
+
+  &:focus {
+    .SubDropdownMenu {
+      display: block;
+    }
+  }
+
+  @include breakpoint-after('960px') {
+    &:hover {
+      .SubDropdownMenu {
+        display: block;
+      }
+    }
+  }
+
+  &.active {
+    .SubDropdownMenu {
+      display: block;
+    }
+  }
+}
+
+.DropdownMenuButton {
+  background: none;
+  padding: 0.75em 1em;
+  color: _palette(text-light);
+  position: relative;
+  border: 2px solid transparent;
+  border: 0;
+  width: 100%;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: _font(family-body);
+  font-size: 1em !important;
+  cursor: pointer;
+
+  &:focus {
+    color: _palette(highlight) !important;
+    font-weight: 600;
+  }
+
+  @include breakpoint-after('960px') {
+    &:hover {
+      color: _palette(highlight) !important;
+      font-weight: 600;
+    }
+  }
+
+  @include breakpoint-before('960px') {
+    text-align: center;
+  }
+}
+
+.NavButton {
+  padding: 0.75em 1em !important;
+  margin-left: 1em;
+  height: auto !important;
+  line-height: 1em !important;
+  letter-spacing: unset !important;
+  font-weight: unset !important;
+  font-size: 1em !important;
+  box-shadow: none !important;
+  font-family: _font(family-body);
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:focus {
+    border: 2px solid _palette(highlight) !important;
+  }
+
+  @include breakpoint-after('960px') {
+    &:hover {
+      border: 2px solid _palette(highlight) !important;
+    }
+  }
+
+  @include breakpoint-before('960px') {
+    margin: 0;
+
+    &.DonateButton {
+      font-family: _font(family-body);
+      width: 100%;
+      margin-top: 1em;
+    }
+  }
+}
+
+.DonateForm {
+  margin: 0;
+  display: flex;
+}
+
+.DonateButton {
+  &:not(:hover) {
+    color: _palette(text-light) !important;
+    border: solid 2px _palette(text-light) !important;
+  }
+}
+
+.MobileMenuToggle {
+  color: _palette(text-light) !important;
+  border: solid 2px _palette(text-light) !important;
+  background: none;
+  font-family: _font(family-body);
+
+  @include breakpoint-after('960px') {
+    display: none !important;
+  }
+}
+
+.CloseButton {
+  background: none;
+  height: auto;
+  box-shadow: none !important;
+  padding: 0.25em 1.5em !important;
+  font-family: _font(family-body);
+  color: _palette(text-light) !important;
+  border: solid 2px _palette(text-light) !important;
+}

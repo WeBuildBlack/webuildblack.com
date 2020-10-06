@@ -1,0 +1,242 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+
+.Main {
+  color: _palette(text-dark);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.SectionHeading {
+  font-family: _font(family-display);
+  font-size: 3em;
+
+  @include breakpoint-before('768px') {
+    font-size: 2em;
+  }
+}
+
+/*  Hero  */
+
+.Hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.HeroContentBlock {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 4em 6em;
+  background: _palette(text-dark);
+  color: _palette(text-light);
+
+  @include breakpoint-before('768px') {
+    text-align: left;
+    padding: 2em 20px;
+  }
+}
+
+.HeroHeading {
+  font-size: 4em;
+  font-family: _font(family-display);
+  margin-bottom: 0.5em;
+
+  @include breakpoint-before('768px') {
+    font-size: 1.75em;
+  }
+}
+
+.HeroText {
+  font-size: 1.5em;
+  font-family: _font(family-body);
+  margin-bottom: 0.5em;
+
+  @include breakpoint-before('768px') {
+    font-size: 1em;
+  }
+}
+
+.HeroImageBlock {
+  position: relative;
+  display: flex;
+  height: 70vh;
+  width: 100%;
+
+  @include breakpoint-before('768px') {
+    height: unset;
+  }
+}
+
+.HeroImage {
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.HeroImageOverlay {
+  margin-top: -1px;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: overlay;
+  background-image: linear-gradient(to bottom, #000000, transparent);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  z-index: 100;
+}
+
+/*  Meetups  */
+
+.MeetupSection {
+  padding: 6%;
+  background: _palette(accent6);
+  color: _palette(text-light);
+
+  @include breakpoint-before('768px') {
+    padding: 2em 20px;
+  }
+}
+
+.SectionIntro {
+  font-size: 1.25em;
+
+  &:last-of-type {
+    margin-bottom: 4em;
+  }
+
+  @include breakpoint-before('768px') {
+    font-size: 1em;
+
+    &:last-of-type {
+      margin-bottom: 2em;
+    }
+  }
+}
+
+.Meetup {
+  display: grid;
+  grid-template-areas: 'content image';
+  grid-template-columns: 1fr 1fr;
+  padding: 3em 0;
+
+  &:nth-of-type(2) {
+    grid-template-areas: 'image content';
+    grid-template-columns: 1fr 1fr;
+
+    .MeetupContent {
+      padding-right: 0;
+      padding-left: 4em;
+    }
+  }
+
+  @include breakpoint-before('768px') {
+    display: block;
+    padding: 0;
+
+    &:not(:last-of-type) {
+      padding: 0 0 2em 0;
+    }
+  }
+}
+
+.MeetupContent {
+  grid-area: content;
+  padding-right: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.25em;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+
+  @include breakpoint-before('768px') {
+    padding: 0 !important;
+    font-size: 1em;
+    text-align: left;
+  }
+}
+
+.MeetupContentHighlight {
+  font-weight: 700;
+}
+
+.MeetupButton {
+  font-family: _font(family-body) !important;
+  font-size: 0.65em;
+  margin-bottom: 2em;
+
+  @include breakpoint-before('768px') {
+    font-size: 0.75em;
+    width: 100%;
+  }
+}
+
+.MeetupImageWrapper {
+  grid-area: image;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.MeetupImage {
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Highlight video */
+
+.HighlightVideoSection {
+  color: _palette(text-light);
+  background: _palette(accent3);
+  padding: 6%;
+
+  @include breakpoint-before('768px') {
+    padding: 2em 20px;
+  }
+}
+
+.Video {
+  height: calc(56.25vw * 0.78);
+  width: 100%;
+
+  @include breakpoint-before('768px') {
+    height: auto;
+  }
+}
+
+/* Call to action Section */
+
+.ActionSection {
+  padding: 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .SectionHeading {
+    margin: 0;
+  }
+}
+
+.ActionContent {
+  font-size: 2em;
+  margin: 0;
+}
+
+.Action {
+  &:hover,
+  &:focus {
+    color: _palette(accent4) !important;
+  }
+}

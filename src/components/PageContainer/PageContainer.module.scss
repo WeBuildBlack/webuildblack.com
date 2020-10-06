@@ -1,0 +1,16 @@
+@import '../../assets/scss/libs/vars';
+@import '../../assets/scss/libs/functions';
+@import '../../assets/scss/libs/mixins';
+@import '../../assets/scss/libs/skel';
+
+.PageContainer {
+  background: _palette(highlight);
+  color: _palette(text-dark);
+  padding-top: 75px;
+  min-height: 100vh;
+}
+
+.PageContent {
+  height: 100%;
+  width: 100%;
+}

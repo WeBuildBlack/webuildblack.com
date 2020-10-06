@@ -1,0 +1,277 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+
+.About {
+  min-height: 100vh;
+}
+
+.SectionHeading {
+  font-family: _font(family-display);
+  font-size: 3em;
+
+  @include breakpoint-before('960px') {
+    font-size: 2em;
+  }
+}
+
+.Section {
+  color: _palette(text-light);
+  background: _palette(accent6);
+  padding: 6em;
+
+  @include breakpoint-before('768px') {
+    padding: 6%;
+  }
+
+  @include breakpoint-before('600px') {
+    padding: 40px 20px;
+  }
+}
+
+/* INTRO SECTION */
+
+.IntroSection {
+  color: _palette(text-light);
+  text-align: right;
+  padding: 4em 6em;
+  background: black;
+
+  @include breakpoint-before('960px') {
+    padding: 6%;
+  }
+
+  @include breakpoint-before('768px') {
+    padding: 3em 40px;
+    text-align: left;
+
+    .IntroHeading {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  @include breakpoint-before('600px') {
+    padding: 2em 20px;
+  }
+}
+
+.IntroHeadingWrapper {
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include breakpoint-before('768px') {
+    text-align: left;
+  }
+}
+
+.IntroHeading {
+  margin-bottom: 0.5em;
+  font-size: 3.25em;
+  font-family: _font(family-display);
+  line-height: 1.35;
+  width: 40vw;
+
+  @include breakpoint-before('960px') {
+    font-size: 2.5em;
+  }
+}
+
+.VerticalLine {
+  border-left: solid 2px _palette(text-light);
+  height: 20vh;
+  width: 40vw;
+  margin-left: 4em;
+  margin-bottom: -2em;
+
+  @include breakpoint-before('960px') {
+    display: block;
+  }
+
+  @include breakpoint-before('960px') {
+    margin-bottom: 0;
+  }
+}
+
+.IntroContentWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include breakpoint-before('768px') {
+    display: block;
+  }
+}
+
+.IntroTextWrapper {
+  width: 40vw;
+
+  @include breakpoint-before('768px') {
+    width: 100%;
+    margin-top: 2em;
+  }
+
+  @include breakpoint-before('600px') {
+    margin-top: 2em;
+  }
+}
+
+.IntroText {
+  font-size: 1.25em;
+  margin-bottom: 1em;
+
+  @include breakpoint-before('768px') {
+    font-size: 1em;
+  }
+}
+
+.VideoContainer {
+  height: calc(40vw * 0.5625);
+  width: 40vw;
+  margin: 7em 0 2em 4em;
+
+  @include breakpoint-before('960px') {
+    margin: 4em 0 0;
+  }
+
+  @include breakpoint-before('768px') {
+    height: calc(100vw * 0.5625 - 40px);
+    width: 100%;
+    margin: 2em 0 0;
+  }
+}
+
+.Video {
+  height: 100%;
+  width: 100%;
+}
+
+.VideoThumbnailWrapper {
+}
+
+.VideoThumbnail {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* WHERE WE'RE HEADED */
+
+.WhereWereHeadedSection {
+  color: _palette(text-light);
+  background: _palette(bg-dark);
+
+  p {
+    font-size: 1.25em;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  @include breakpoint-before('768px') {
+    p {
+      font-size: 1em;
+    }
+  }
+}
+
+/* TEAM GRID SECTION */
+
+.TeamSection {
+  color: _palette(text-light);
+  background: _palette(accent6);
+  padding: 6em;
+
+  @include breakpoint-before('768px') {
+    padding: 6%;
+  }
+
+  @include breakpoint-before('600px') {
+    padding: 40px 20px;
+  }
+}
+
+.TeamList {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.TeamMember {
+  padding: 0;
+  display: grid;
+  grid-template-rows: min-content;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.HeadshotWrapper {
+  width: 100%;
+  flex: 1;
+}
+
+.Headshot {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.Info {
+  align-self: flex-start;
+  padding: 1em 0;
+}
+
+.Name {
+  font-size: 1.5em;
+  font-family: _font(family-heading);
+  margin-bottom: 0;
+}
+
+.Role {
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.Bio {
+  margin: 0;
+}
+
+/* Call to action Section */
+
+.ActionSection {
+  padding: 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  .SectionHeading {
+    margin: 0;
+  }
+}
+
+.ActionContent {
+  font-size: 2em;
+  margin: 0;
+
+  @include breakpoint-before('768px') {
+    font-size: 1.25em;
+  }
+}
+
+.Action {
+  &:hover,
+  &:focus {
+    font-weight: bolder !important;
+    color: _palette(text-dark) !important;
+  }
+}
