@@ -157,7 +157,6 @@ export default function Nav() {
           return;
 
         case "ArrowDown":
-          event.stopPropagation();
           event.preventDefault();
           if (!dropdownOpen) {
             openDropdown(navItem);
@@ -167,7 +166,6 @@ export default function Nav() {
           break;
 
         case "ArrowUp":
-          event.stopPropagation();
           event.preventDefault();
           if (!dropdownOpen) {
             openDropdown(navItem);

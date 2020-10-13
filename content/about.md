@@ -13,7 +13,7 @@ teamMembers:
     role: CEO and Co-founder
     imageName: devin-headshot.png
     bio: Devin is a Full Stack Engineer with 5 years of experience building products with meaning. He loves finding people's hidden potential. His hobbies include debating Hip Hop, riding his bike, and sipping maple whiskey.
-  - name: Kris lee
+  - name: Kris Lee
     role: Co-founder
     imageName: kris-headshot.jpg
     bio: Kris is a Systems Engineer with over 20 years of experience, 5 years in Cybersecurity, with a special interest in vulnerability & penetration testing. He's devoted to community development, technical literacy, & wellness.
