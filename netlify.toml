@@ -4,6 +4,11 @@
   status = 200
 
 [[redirects]]
+  from = "/get-involved/programs/build-businesses"
+  to = "https://docs.google.com/forms/d/e/1FAIpQLScr0cdEpXqsSZuUYry868uHRuh4X8wJEjLCmcYX_GJrTWp9Og/viewform"
+  status = 200
+
+[[redirects]]
   from = "/get-involved/slack"
   to = "https://t.co/Tyqbn7FNyv?amp=1"
   status = 200

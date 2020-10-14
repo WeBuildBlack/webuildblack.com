@@ -356,11 +356,27 @@ export default function Nav() {
                 role="menuitem"
                 className={styles.DropdownMenuButton}
                 data-navItem="Get involved"
+                data-index={3}
+                tabIndex={-1}
+                ref={bountyBoardRef}
+                data-href="/get-involved/programs/build-businesses"
+                href="/get-involved/programs/build-businesses"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Build Businesses
+              </a>
+            </li>
+            <li role="none" className={styles.DropdownMenuItem}>
+              <a
+                role="menuitem"
+                className={styles.DropdownMenuButton}
+                data-navItem="Get involved"
                 data-href="/get-involved/slack"
                 href="/get-involved/slack"
                 target="_blank"
                 rel="noreferrer"
-                data-index={3}
+                data-index={4}
                 ref={slackRef}
                 tabIndex={-1}
               >
