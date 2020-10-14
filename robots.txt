@@ -16,6 +16,7 @@ events =>
     The Build Up => /events/archive/the-build-up
 programs =>
   Bounty Board => /programs/bounty-board
+  Build Businesses => /programs/build-businesses
   archive =>
     BuildNG => /programs/archive/build-next-gen
     Ingenious Thought => /programs/archive/ingenious-thought
