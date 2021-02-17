@@ -64,7 +64,8 @@ export default function Home({ data }) {
               {`Our mission is to empower the Black community to achieve
                 socio-economic change through technical education and
                 professional development. We Build Black creates opportunities
-                for Black technologists to network, share skills, give and receive mentorship, and discover their next employer. By nurturing the existing community of Black technologists and
+                for Black technologists to network, share skills, give and receive mentorship, 
+                and discover their next employer. By nurturing the existing community of Black technologists and
                 creating pathways into tech, we're building a
                 more equitable tech industry for ourselves and the next
                 generation.`}
