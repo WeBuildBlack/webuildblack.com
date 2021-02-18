@@ -359,12 +359,12 @@ export default function Nav() {
                 data-index={3}
                 tabIndex={-1}
                 ref={bountyBoardRef}
-                data-href="/get-involved/programs/build-businesses"
-                href="/get-involved/programs/build-businesses"
+                data-href="/get-involved/programs/bhm-competition"
+                href="/get-involved/programs/bhm-competition"
                 target="_blank"
                 rel="noreferrer"
               >
-                Build Businesses
+                BHM Competition
               </a>
             </li>
             <li role="none" className={styles.DropdownMenuItem}>

@@ -4,8 +4,8 @@
   status = 200
 
 [[redirects]]
-  from = "/get-involved/programs/build-businesses"
-  to = "https://docs.google.com/forms/d/e/1FAIpQLScr0cdEpXqsSZuUYry868uHRuh4X8wJEjLCmcYX_GJrTWp9Og/viewform"
+  from = "/get-involved/programs/bhm-competition"
+  to = "https://forms.gle/sDeX35tLU24Ye8qM8"
   status = 200
 
 [[redirects]]
