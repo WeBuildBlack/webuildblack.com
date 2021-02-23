@@ -28,11 +28,7 @@ export default function Showcase({ data }) {
       </header>
       <main className={styles.Main}>
         <div className={styles.GoalSection}>
-          <h2 className={styles.SectionHeading}>The why</h2>
-          <p className={styles.IntroText}>
-            {`Representation matters. We're dedicated to providing a platform for Black women tech innovators and to building new pathways for them into the industry.`}
-          </p>
-
+          <h2 className={styles.SectionHeading}>The Competition and How to Enter</h2>
           <p className={styles.IntroText}>
             {`We Build Black will be showcasing some of the coolest 
             projects made by people in their community. One of these 
