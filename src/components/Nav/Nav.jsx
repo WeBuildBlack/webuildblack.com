@@ -13,13 +13,14 @@ export default function Nav() {
   const donateRef = useRef(null);
   const mavensRef = useRef(null);
   const meetupsRef = useRef(null);
+  const showcaseRef = useRef(null);
   const bountyBoardRef = useRef(null);
   const slackRef = useRef(null);
   const hireRef = useRef(null);
   const partnerRef = useRef(null);
   const volunteerRef = useRef(null);
   const navItemRefs = [aboutRef, getInvolvedRef, makeAnImpactRef, donateRef];
-  const getInvolvedRefs = [mavensRef, meetupsRef, bountyBoardRef, slackRef];
+  const getInvolvedRefs = [mavensRef, meetupsRef, showcaseRef, bountyBoardRef, slackRef];
   const makeAnImpactRefs = [hireRef, partnerRef, volunteerRef];
   const [activeMenuItemIndex, setActiveMenuItemIndex] = useState(null);
   const [activeSubMenuItemIndex, setActiveSubMenuItemIndex] = useState(null);
@@ -333,6 +334,20 @@ export default function Nav() {
                 to="/get-involved/events/meetups"
               >
                 Meetups
+              </Link>
+            </li>
+            <li role="none" className={styles.DropdownMenuItem}>
+              <Link
+                role="menuitem"
+                className={styles.DropdownMenuButton}
+                data-navItem="Get involved"
+                data-index={1}
+                tabIndex={-1}
+                ref={showcaseRef}
+                data-href="/get-involved/events/community-showcase"
+                to="/get-involved/events/community-showcase"
+              >
+                Community Showcase
               </Link>
             </li>
             <li role="none" className={styles.DropdownMenuItem}>
