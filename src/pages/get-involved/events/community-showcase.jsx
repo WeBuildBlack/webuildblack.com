@@ -36,12 +36,12 @@ export default function Showcase({ data }) {
             building something you love and looking to get some funding,
              enter the WBB Community Showcase. To enter the competition 
              all you need to do is follow `}
-             <a href="https://forms.gle/5LDeyRHsgP7hrwL69">@webuildblack on Instagram</a>
+             <a href="instagram.com/webuildblack/">@webuildblack on Instagram</a>
              {` and post a description of why you're project should win. 
              Also, if you're an engineer skilled in Front end 
              Javascript, Python (machine learning/ai), Java, or mobile 
              programming JP Morgan Chase is hiring! To enter your resume 
-             click `}<a href="https://forms.gle/5LDeyRHsgP7hrwL69">here</a>
+             click `}<a href="https://forms.gle/UNZC8jersri79qqX6">here</a>
              {` to fill out the form.  This is a virtual event and will be streaming on We Build Black's
              YouTube Live channel `} <a href="https://www.youtube.com/watch?v=SKNdzY4xYTU&ab_channel=WeBuildBlack">here</a>.
           </p>
