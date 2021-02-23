@@ -36,7 +36,7 @@ export default function Showcase({ data }) {
             building something you love and looking to get some funding,
              enter the WBB Community Showcase. To enter the competition 
              all you need to do is follow `}
-             <a href="instagram.com/webuildblack/">@webuildblack on Instagram</a>
+             <a href="https://www.instagram.com/webuildblack/">@webuildblack on Instagram</a>
              {` and post a description of why you're project should win. 
              Also, if you're an engineer skilled in Front end 
              Javascript, Python (machine learning/ai), Java, or mobile 
