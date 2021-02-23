@@ -10,7 +10,7 @@ import styles from '../../../assets/scss/mavens.module.scss'
 
 export default function Showcase({ data }) {
   const heroImage = data.allFile.nodes.find(node =>
-    node.childImageSharp.fluid.src.includes('showcase3')
+    node.childImageSharp.fluid.src.includes('showcase4')
   )
 
   return (
