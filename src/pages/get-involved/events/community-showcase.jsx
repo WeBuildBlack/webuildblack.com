@@ -30,21 +30,13 @@ export default function Showcase({ data }) {
         <div className={styles.GoalSection}>
           <h2 className={styles.SectionHeading}>The Competition and How to Enter</h2>
           <p className={styles.IntroText}>
-            {`We Build Black will be showcasing some of the coolest 
-            projects made by people in their community. One of these 
-            lucky contestants will win $1000! If you're a Black techie 
-            building something you love and looking to get some funding,
-             enter the WBB Community Showcase. To enter the competition 
-             all you need to do is follow `}
-             <a href="https://www.instagram.com/webuildblack/">@webuildblack on Instagram</a>
-             {` and post a description of why you're project should win. 
-             Also, if you're an engineer skilled in Front end 
-             Javascript, Python (machine learning/ai), Java, or mobile 
-             programming JP Morgan Chase is hiring! To enter your resume 
-             click `}<a href="https://forms.gle/UNZC8jersri79qqX6">here</a>
-             {` to fill out the form.  This is a virtual event and will be streaming on We Build Black's
-             YouTube Live channel `} <a href="https://www.youtube.com/watch?v=SKNdzY4xYTU&ab_channel=WeBuildBlack">here</a>.
+            We Build Black will be showcasing some of the coolest projects made by people in their community!
+            If you're a Black techie building something you love and looking to get some funding, this is the perfect chance for you. Enter the WBB Community Showcase!⁠
+This is a virtual event and we will be <a href={`https://www.youtube.com/watch?v=SKNdzY4xYTU&ab_channel=WeBuildBlack⁠`}>streaming on We Build Black's YouTube Live channel.</a>
+To participate, just go to <a href={`https://www.eventbrite.com/e/the-we-build-black-community-showcase-tickets-142633445475`}>this link</a> and get yourself a ticket. You are in!⁠
+ Don't miss this unique opportunity to be supported and recognized by our amazing community!
           </p>
+          <p>Date And Time of the event: Thursday, March 25, 2021, 6:00 EST.⁠</p>
         </div>
       </main>
     </PageContainer>
