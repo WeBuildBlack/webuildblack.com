@@ -37,10 +37,10 @@ To participate, just go to <a href={`https://www.eventbrite.com/e/the-we-build-b
  Don't miss this unique opportunity to be supported and recognized by our amazing community!
           </p>
           <p className={styles.IntroText}>
-             Also, if you're an engineer skilled in Front end 
-             Javascript, Python (machine learning/ai), Java, or mobile 
-             programming JP Morgan Chase is hiring! To enter your resume 
-             click<a href="https://forms.gle/UNZC8jersri79qqX6">here</a>
+             Also, if you're an engineer skilled in Front end
+             Javascript, Python (machine learning/ai), Java, or mobile
+             programming JP Morgan Chase is hiring! To enter your resume
+             click <a href="https://forms.gle/UNZC8jersri79qqX6">here</a>.
           </p>
           <p>Date And Time of the event: Thursday, March 25, 2021, 6:00 EST.⁠</p>
         </div>
