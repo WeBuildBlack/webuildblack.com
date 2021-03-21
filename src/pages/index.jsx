@@ -36,10 +36,6 @@ export default function Home({ data }) {
     node.childImageSharp.fluid.src.includes('meetups')
   )
 
-  const gridImageThree = data.allFile.nodes.find(node =>
-    node.childImageSharp.fluid.src.includes('bounty-board')
-  )
-
   const gridImageFour = data.allFile.nodes.find(node =>
     node.childImageSharp.fluid.src.includes('slack')
   )
@@ -124,20 +120,6 @@ export default function Home({ data }) {
                 alt=""
               />
             </Link>
-          </div>
-          <div className={styles.GridImageWrapper}>
-            <a
-              href="/get-involved/programs/bounty-board"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className={styles.GridImageOverlay}>Bounty Board</div>
-              <Img
-                className={styles.GridImage}
-                fluid={gridImageThree.childImageSharp.fluid}
-                alt=""
-              />
-            </a>
           </div>
           <div className={styles.GridImageWrapper}>
             <a href="/get-involved/slack" target="_blank" rel="noreferrer">

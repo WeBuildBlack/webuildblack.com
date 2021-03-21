@@ -14,13 +14,13 @@ export default function Nav() {
   const mavensRef = useRef(null);
   const meetupsRef = useRef(null);
   const showcaseRef = useRef(null);
-  const bountyBoardRef = useRef(null);
   const slackRef = useRef(null);
   const hireRef = useRef(null);
   const partnerRef = useRef(null);
   const volunteerRef = useRef(null);
+  const schoolRef = useRef(null);
   const navItemRefs = [aboutRef, getInvolvedRef, makeAnImpactRef, donateRef];
-  const getInvolvedRefs = [mavensRef, meetupsRef, showcaseRef, bountyBoardRef, slackRef];
+  const getInvolvedRefs = [mavensRef, meetupsRef, showcaseRef, slackRef, schoolRef];
   const makeAnImpactRefs = [hireRef, partnerRef, volunteerRef];
   const [activeMenuItemIndex, setActiveMenuItemIndex] = useState(null);
   const [activeSubMenuItemIndex, setActiveSubMenuItemIndex] = useState(null);
@@ -341,7 +341,7 @@ export default function Nav() {
                 role="menuitem"
                 className={styles.DropdownMenuButton}
                 data-navItem="Get involved"
-                data-index={1}
+                data-index={2}
                 tabIndex={-1}
                 ref={showcaseRef}
                 data-href="/get-involved/events/community-showcase"
@@ -351,36 +351,18 @@ export default function Nav() {
               </Link>
             </li>
             <li role="none" className={styles.DropdownMenuItem}>
-              <a
-                role="menuitem"
-                className={styles.DropdownMenuButton}
-                data-navItem="Get involved"
-                data-index={2}
-                tabIndex={-1}
-                ref={bountyBoardRef}
-                data-href="/get-involved/programs/bounty-board"
-                href="/get-involved/programs/bounty-board"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Bounty Board
-              </a>
-            </li>
-            <li role="none" className={styles.DropdownMenuItem}>
-              <a
+              <Link
                 role="menuitem"
                 className={styles.DropdownMenuButton}
                 data-navItem="Get involved"
                 data-index={3}
                 tabIndex={-1}
-                ref={bountyBoardRef}
-                data-href="/get-involved/programs/bhm-competition"
-                href="/get-involved/programs/bhm-competition"
-                target="_blank"
-                rel="noreferrer"
+                ref={schoolRef}
+                data-href="/get-involved/programs/school-coding"
+                to="/get-involved/programs/school-coding"
               >
-                BHM Competition
-              </a>
+                School Coding Program
+              </Link>
             </li>
             <li role="none" className={styles.DropdownMenuItem}>
               <a

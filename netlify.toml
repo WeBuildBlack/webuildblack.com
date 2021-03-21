@@ -1,14 +1,4 @@
 [[redirects]]
-  from = "/get-involved/programs/bounty-board"
-  to = "https://forms.gle/DpLFYmSGTJPDWbuJ7"
-  status = 200
-
-[[redirects]]
-  from = "/get-involved/programs/bhm-competition"
-  to = "https://forms.gle/sDeX35tLU24Ye8qM8"
-  status = 200
-
-[[redirects]]
   from = "/get-involved/slack"
   to = "https://t.co/Tyqbn7FNyv?amp=1"
   status = 200
