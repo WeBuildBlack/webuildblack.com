@@ -22,3 +22,8 @@
   from = "/subscribe"
   to = "https://webuildblack.us14.list-manage.com/subscribe?u=0b4ea00684996f451777beeb0&id=deb148f597"
   status = 200
+
+[[redirects]]
+  from = "/get-involved/events/mavens-conference"
+  to = "https://mavens-io.com"
+  status = 200
