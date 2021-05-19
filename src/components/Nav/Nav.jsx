@@ -316,7 +316,7 @@ export default function Nav() {
                 data-index={0}
                 tabIndex={-1}
                 ref={mavensRef}
-                data-href="/get-involved/events/mavens-conference"
+                data-href="https://mavens-io.com"
                 to="/get-involved/events/mavens-conference"
               >
                 Mavens I/O
