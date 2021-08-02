@@ -27,3 +27,8 @@
   from = "/get-involved/events/mavens-conference"
   to = "https://mavens-io.com"
   status = 200
+  
+[[redirects]]
+  from = "/mavens-io"
+  to = "https://mavens-io.com"
+  status = 200
