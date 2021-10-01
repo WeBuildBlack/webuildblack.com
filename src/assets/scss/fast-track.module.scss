@@ -104,7 +104,7 @@
   }
   
   @include breakpoint-after('414px') {
-    margin: 0 1em 1em 1em;
+    margin: 1em;
   }
   
   @include breakpoint-after('768px') {
