@@ -175,3 +175,18 @@
     font-size: 1em;
   }
 }
+
+.FaqAccordion {
+  width: 100%;
+  max-width: 75ch;
+  margin: auto;
+
+  :global(.rc-collapse-header) {
+    background-color: _palette(bg-light);
+    font-weight: bolder;
+  }
+
+  :global(.rc-collapse-content) {
+    background-color: #fff;
+  }
+}

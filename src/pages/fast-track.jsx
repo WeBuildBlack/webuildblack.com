@@ -2,6 +2,8 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import className from 'classnames'
 import { PageContainer } from '../components'
+import Collapse, { Panel as CollapsePanel } from 'rc-collapse';
+import 'rc-collapse/assets/index.css';
 import styles from '../assets/scss/fast-track.module.scss'
 
 import googleCerts from '../assets/images/google-certificates.png'
@@ -14,8 +16,6 @@ import mentor from '../assets/images/Mentor1.jpg'
 import womanCoding from '../assets/images/woman-coding.jpg'
 
 export default function FastTrack({ data }) {
-  
-
   return (
     <PageContainer>
       <Helmet title="FAST TRACK | We Build Black" />
@@ -168,6 +168,27 @@ export default function FastTrack({ data }) {
             >
               Become a Student
             </button>
+            <button
+              type="button"
+              className={className('button special', styles.Button)}
+            >
+              Become a Mentor
+            </button>
+          </div>
+        </section>
+        <section className={styles.Section}>
+          <div className={styles.SectionHeadingWrapper}>
+            <h2 className={styles.SectionHeading}>Frequently Asked Questions</h2>
+          </div>
+          <div className={styles.SectionContent}>
+            <Collapse accordion={true} className={styles.FaqAccordion}>
+              <CollapsePanel header="Why did you choose to go to the moon?" headerClass="FaqHeader">
+                <p>We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win.</p>
+              </CollapsePanel>
+              <CollapsePanel header="Has science mastered prophecy?">
+                <p>Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next 10.</p>
+              </CollapsePanel>
+            </Collapse>
           </div>
         </section>
       </main>
