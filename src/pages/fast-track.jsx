@@ -12,7 +12,7 @@ import microsoft from '../assets/images/microsoft.png'
 import shopify from '../assets/images/shopify.png'
 import google from '../assets/images/google-logo.png'
 import macbookIphone from '../assets/images/macbook-iphone.jpeg'
-import mentor from '../assets/images/Mentor1.jpg'
+import mentor from '../assets/images/mentor2.png'
 import womanCoding from '../assets/images/woman-coding.jpg'
 
 export default function FastTrack({ data }) {
@@ -35,25 +35,31 @@ export default function FastTrack({ data }) {
           </div>
 
           <div className={styles.ButtonsContainer} data-sal="slide-up" data-sal-duration="1200" data-sal-easeing="ease-in-out">
-            <button
-              type="button"
-              className={className('button special', styles.Button)}
-              
-            >
-              Become a Corporate Partner
-            </button>
-            <button
-              type="button"
-              className={className('button special', styles.Button)}
-            >
-              Become a Student
-            </button>
-            <button
-              type="button"
-              className={className('button special', styles.Button)}
-            >
-              Become a Mentor
-            </button>
+            <a href="https://forms.gle/6QAyeXEaJrCXVgw88" target="_blank" className={className(styles.Anchor)}>
+              <button
+                type="button"
+                className={className('button special', styles.Button)}
+                
+              >
+                Become an Internship Partner
+              </button>
+            </a>
+            <a href="https://forms.gle/Vhco9cSYRAdMkQdj9" target="_blank" className={className(styles.Anchor)}>
+              <button
+                type="button"
+                className={className('button special', styles.Button)}
+              >
+                Become a Student
+              </button>
+            </a>
+            <a href="https://forms.gle/qtVksFapsLtCR3388" target="_blank" className={className(styles.Anchor)}>
+              <button
+                type="button"
+                className={className('button special', styles.Button)}
+              >
+                Become a Mentor
+              </button>
+            </a>
           </div>
         </section>
 
@@ -146,6 +152,37 @@ export default function FastTrack({ data }) {
         </section>
         <section className={styles.Section}>
           <div className={styles.SectionHeadingWrapper}>
+            <h2 className={styles.SectionHeading}>Frequently Asked Questions</h2>
+            <p>For other questions email info@webuildblack.com</p>
+          </div>
+          <div className={styles.SectionContent}>
+            <Collapse accordion={true} className={styles.FaqAccordion}>
+              <CollapsePanel header="What are the requirements to join the program?" headerClass="FaqHeader">
+                <p>First, you must live in NYC. Second, you must be a Black woman or under the poverty line.</p>
+              </CollapsePanel>
+              <CollapsePanel header="How do I apply to join the program?">
+                <p>Click the button on this page above that says “BECOME A STUDENT” and fill out the form before November 12, 2021. After filling out the form someone from our team will reach out to you to schedule an interview.</p>
+              </CollapsePanel>
+              <CollapsePanel header="When will I know if I’m accepted?">
+                <p>On November 16 we will send out emails to everyone letting them know of their applications status.</p>
+              </CollapsePanel>
+              <CollapsePanel header="When do applications open and close?">
+                <p>Applications open October 4, 2021 and close November 12, 2021.</p>
+              </CollapsePanel>
+              <CollapsePanel header="When is the first day of class?">
+                <p>January 17, 2022 is the first day of class. We’ll get together in-person so that you can receive your equipment and meet the rest of your cohort as well as your mentor.</p>
+              </CollapsePanel>
+              <CollapsePanel header="How do I apply to be a mentor?">
+                <p>Click the button on this page above that says “BECOME A MENTOR" and fill out the form. After filling out the form someone from our team will reach out to you to schedule an interview.</p>
+              </CollapsePanel>
+              <CollapsePanel header="How do I apply for my company to be an internship partner?">
+                <p>Click the button on this page above that says “BECOME A CORPORATE PARTNER" and fill out the form. After filling out the form someone from our team will reach out to you to schedule an interview.</p>
+              </CollapsePanel>
+            </Collapse>
+          </div>
+        </section>
+        <section className={styles.Section}>
+          <div className={styles.SectionHeadingWrapper}>
             <h2 className={styles.SectionHeading}>Our Partners</h2>
           </div>
           <div className={styles.ButtonsContainer}>
@@ -155,40 +192,32 @@ export default function FastTrack({ data }) {
           </div>
         </section>
         <section className={styles.Section}>
-          <div className={styles.ButtonsContainer}>
-            <button
-              type="button"
-              className={className('button special', styles.Button)}
-            >
-              Become a Corporate Partner
-            </button>
-            <button
-              type="button"
-              className={className('button special', styles.Button)}
-            >
-              Become a Student
-            </button>
-            <button
-              type="button"
-              className={className('button special', styles.Button)}
-            >
-              Become a Mentor
-            </button>
-          </div>
-        </section>
-        <section className={styles.Section}>
-          <div className={styles.SectionHeadingWrapper}>
-            <h2 className={styles.SectionHeading}>Frequently Asked Questions</h2>
-          </div>
-          <div className={styles.SectionContent}>
-            <Collapse accordion={true} className={styles.FaqAccordion}>
-              <CollapsePanel header="Why did you choose to go to the moon?" headerClass="FaqHeader">
-                <p>We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win.</p>
-              </CollapsePanel>
-              <CollapsePanel header="Has science mastered prophecy?">
-                <p>Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next 10.</p>
-              </CollapsePanel>
-            </Collapse>
+          <div className={styles.ButtonsContainer} data-sal="slide-up" data-sal-duration="1200" data-sal-easeing="ease-in-out">
+            <a href="https://forms.gle/6QAyeXEaJrCXVgw88" target="_blank" className={className(styles.Anchor)}>
+              <button
+                type="button"
+                className={className('button special', styles.Button)}
+                
+              >
+                Become an Internship Partner
+              </button>
+            </a>
+            <a href="https://forms.gle/Vhco9cSYRAdMkQdj9" target="_blank" className={className(styles.Anchor)}>
+              <button
+                type="button"
+                className={className('button special', styles.Button)}
+              >
+                Become a Student
+              </button>
+            </a>
+            <a href="https://forms.gle/qtVksFapsLtCR3388" target="_blank" className={className(styles.Anchor)}>
+              <button
+                type="button"
+                className={className('button special', styles.Button)}
+              >
+                Become a Mentor
+              </button>
+            </a>
           </div>
         </section>
       </main>

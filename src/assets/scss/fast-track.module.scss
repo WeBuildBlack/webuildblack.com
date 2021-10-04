@@ -135,7 +135,7 @@
 }
 
 .HeroImage {
-  background-image: url('https://images.unsplash.com/photo-1489533119213-66a5cd877091?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2371&q=80');
+  background-image: url('../images/mentor1.jpg');
   background-size: cover;
   background-position-y: center;
   width: 100%;
@@ -189,4 +189,13 @@
   :global(.rc-collapse-content) {
     background-color: #fff;
   }
+}
+
+.Anchor {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  text-decoration: none;
+  color: initial;
 }
