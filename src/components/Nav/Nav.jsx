@@ -344,10 +344,10 @@ export default function Nav() {
                 data-index={2}
                 tabIndex={-1}
                 ref={showcaseRef}
-                data-href="/get-involved/events/community-showcase"
-                to="/get-involved/events/community-showcase"
+                data-href="/fast-track"
+                to="/fast-track"
               >
-                Community Showcase
+                Fast Track
               </Link>
             </li>
             <li role="none" className={styles.DropdownMenuItem}>
@@ -361,7 +361,7 @@ export default function Nav() {
                 data-href="/get-involved/programs/school-coding"
                 to="/get-involved/programs/school-coding"
               >
-                School Coding Program
+                Crowns of Code
               </Link>
             </li>
             <li role="none" className={styles.DropdownMenuItem}>
