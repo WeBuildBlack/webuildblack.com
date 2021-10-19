@@ -10,7 +10,7 @@ import googleCerts from '../assets/images/google-certificates.png'
 import calendar from '../assets/images/fast-track-calendar.jpg'
 import microsoft from '../assets/images/microsoft.png'
 import shopify from '../assets/images/shopify.png'
-import google from '../assets/images/google-logo.png'
+import google from '../assets/images/google-logo-transparent.png'
 import macbookIphone from '../assets/images/macbook-iphone.jpeg'
 import mentor from '../assets/images/mentor2.png'
 import womanCoding from '../assets/images/woman-coding.jpg'
@@ -79,7 +79,7 @@ export default function FastTrack({ data }) {
               data-sal-easeing="ease-in-out"
             />
             <div className={styles.SectionText}>
-              <p>{`Google has partnered with us to give our students scholarships to their online courses. They have training in Android Engineering, UX/UI Design, and Data Analysis. Google is so sure of their courses that they view a certificate from them as the equivalent to a college degree! So program participants can leave this course knowing they can shoot for a job at Google and be taken seriously.`}</p>
+            <p>{`Google has partnered with us to give our students scholarships to their online courses. They have training in Android Engineering, UX/UI Design, and Data Analysis. The Google Career Certificate program can help you get on the fast track to a competitively paid job in a high-growth field. You don’t need relevant experience or a degree to complete this flexible, online job training. Just put the skills, passion, and ambition you already have to work. `}</p>
             </div>
           </div>
         </section>
