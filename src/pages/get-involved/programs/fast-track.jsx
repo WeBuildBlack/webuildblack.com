@@ -1,19 +1,20 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import className from 'classnames'
-import { PageContainer } from '../components'
 import Collapse, { Panel as CollapsePanel } from 'rc-collapse';
-import 'rc-collapse/assets/index.css';
-import styles from '../assets/scss/fast-track.module.scss'
 
-import googleCerts from '../assets/images/google-certificates.png'
-import calendar from '../assets/images/fast-track-calendar.jpg'
-import microsoft from '../assets/images/microsoft.png'
-import shopify from '../assets/images/shopify.png'
-import google from '../assets/images/google-logo-transparent.png'
-import macbookIphone from '../assets/images/macbook-iphone.jpeg'
-import mentor from '../assets/images/mentor2.png'
-import womanCoding from '../assets/images/woman-coding.jpg'
+import { PageContainer } from '../../../components'
+import googleCerts from '../../../assets/images/google-certificates.png'
+import calendar from '../../../assets/images/fast-track-calendar.jpg'
+import microsoft from '../../../assets/images/microsoft.png'
+import shopify from '../../../assets/images/shopify.png'
+import google from '../../../assets/images/google-logo-transparent.png'
+import macbookIphone from '../../../assets/images/macbook-iphone.jpeg'
+import mentor from '../../../assets/images/mentor2.png'
+import womanCoding from '../../../assets/images/woman-coding.jpg'
+
+import styles from '../../../assets/scss/fast-track.module.scss'
+import 'rc-collapse/assets/index.css';
 
 export default function FastTrack({ data }) {
   return (
@@ -39,7 +40,7 @@ export default function FastTrack({ data }) {
               <button
                 type="button"
                 className={className('button special', styles.Button)}
-                
+
               >
                 Become an Internship Partner
               </button>
@@ -197,7 +198,7 @@ export default function FastTrack({ data }) {
               <button
                 type="button"
                 className={className('button special', styles.Button)}
-                
+
               >
                 Become an Internship Partner
               </button>
