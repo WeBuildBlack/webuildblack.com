@@ -36,7 +36,7 @@ export default function FastTrack({ data }) {
           </div>
 
           <div className={styles.ButtonsContainer} data-sal="slide-up" data-sal-duration="1200" data-sal-easeing="ease-in-out">
-            <a href="https://forms.gle/6QAyeXEaJrCXVgw88" target="_blank" className={className(styles.Anchor)}>
+            <a href="https://forms.gle/6QAyeXEaJrCXVgw88" target="_blank" rel="noreferrer" className={className(styles.Anchor)}>
               <button
                 type="button"
                 className={className('button special', styles.Button)}
@@ -45,7 +45,7 @@ export default function FastTrack({ data }) {
                 Become an Internship Partner
               </button>
             </a>
-            <a href="https://forms.gle/Vhco9cSYRAdMkQdj9" target="_blank" className={className(styles.Anchor)}>
+            <a href="https://forms.gle/Vhco9cSYRAdMkQdj9" target="_blank" rel="noreferrer" className={className(styles.Anchor)}>
               <button
                 type="button"
                 className={className('button special', styles.Button)}
@@ -53,7 +53,7 @@ export default function FastTrack({ data }) {
                 Become a Student
               </button>
             </a>
-            <a href="https://forms.gle/qtVksFapsLtCR3388" target="_blank" className={className(styles.Anchor)}>
+            <a href="https://forms.gle/qtVksFapsLtCR3388" target="_blank" rel="noreferrer" className={className(styles.Anchor)}>
               <button
                 type="button"
                 className={className('button special', styles.Button)}
@@ -194,7 +194,7 @@ export default function FastTrack({ data }) {
         </section>
         <section className={styles.Section}>
           <div className={styles.ButtonsContainer} data-sal="slide-up" data-sal-duration="1200" data-sal-easeing="ease-in-out">
-            <a href="https://forms.gle/6QAyeXEaJrCXVgw88" target="_blank" className={className(styles.Anchor)}>
+            <a href="https://forms.gle/6QAyeXEaJrCXVgw88" target="_blank" rel="noreferrer" className={className(styles.Anchor)}>
               <button
                 type="button"
                 className={className('button special', styles.Button)}
@@ -203,7 +203,7 @@ export default function FastTrack({ data }) {
                 Become an Internship Partner
               </button>
             </a>
-            <a href="https://forms.gle/Vhco9cSYRAdMkQdj9" target="_blank" className={className(styles.Anchor)}>
+            <a href="https://forms.gle/Vhco9cSYRAdMkQdj9" target="_blank" rel="noreferrer" className={className(styles.Anchor)}>
               <button
                 type="button"
                 className={className('button special', styles.Button)}
@@ -211,7 +211,7 @@ export default function FastTrack({ data }) {
                 Become a Student
               </button>
             </a>
-            <a href="https://forms.gle/qtVksFapsLtCR3388" target="_blank" className={className(styles.Anchor)}>
+            <a href="https://forms.gle/qtVksFapsLtCR3388" target="_blank" rel="noreferrer" className={className(styles.Anchor)}>
               <button
                 type="button"
                 className={className('button special', styles.Button)}
