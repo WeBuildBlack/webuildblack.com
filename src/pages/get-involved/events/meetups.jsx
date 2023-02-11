@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React, { useCallback } from 'react'
 import Helmet from 'react-helmet'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { graphql, Link } from 'gatsby'
 import classNames from 'classnames'
 
@@ -11,15 +11,15 @@ import styles from '../../../assets/scss/meetups.module.scss'
 
 export default function Meetups({ data }) {
   const heroImage = data.allFile.nodes.find(node =>
-    node.childImageSharp.fluid.src.includes('hero')
+    node.childImageSharp.gatsbyImageData.src.includes('hero')
   )
 
   const sbbImage = data.allFile.nodes.find(node =>
-    node.childImageSharp.fluid.src.includes('SBB')
+    node.childImageSharp.gatsbyImageData.src.includes('SBB')
   )
 
   const bseImage = data.allFile.nodes.find(node =>
-    node.childImageSharp.fluid.src.includes('BSE')
+    node.childImageSharp.gatsbyImageData.src.includes('BSE')
   )
 
   const meetupButtonClassName = classNames(
@@ -40,11 +40,10 @@ export default function Meetups({ data }) {
         </div>
         <div className={styles.HeroImageBlock}>
           <div className={styles.HeroImageOverlay} />
-          <Img
+          <GatsbyImage
+            image={heroImage.childImageSharp.gatsbyImageData}
             className={styles.HeroImage}
-            fluid={heroImage.childImageSharp.fluid}
-            alt=""
-          />
+            alt="" />
         </div>
       </header>
       <main className={styles.Main}>
@@ -56,11 +55,10 @@ export default function Meetups({ data }) {
 
           <div className={styles.Meetup}>
             <div className={styles.MeetupImageWrapper}>
-              <Img
+              <GatsbyImage
+                image={sbbImage.childImageSharp.gatsbyImageData}
                 className={styles.MeetupImage}
-                fluid={sbbImage.childImageSharp.fluid}
-                alt=""
-              />
+                alt="" />
             </div>
             <div className={styles.MeetupContent}>
               <p>
@@ -91,11 +89,10 @@ export default function Meetups({ data }) {
 
           <div className={styles.Meetup}>
             <div className={styles.MeetupImageWrapper}>
-              <Img
+              <GatsbyImage
+                image={bseImage.childImageSharp.gatsbyImageData}
                 className={styles.MeetupImage}
-                fluid={bseImage.childImageSharp.fluid}
-                alt=""
-              />
+                alt="" />
             </div>
             <div className={styles.MeetupContent}>
               <p>
@@ -125,19 +122,15 @@ export default function Meetups({ data }) {
         </div>
       </main>
     </PageContainer>
-  )
+  );
 }
 
-export const query = graphql`
-  query Meetups {
-    allFile(filter: { relativeDirectory: { eq: "meetups" } }) {
-      nodes {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
+export const query = graphql`query Meetups {
+  allFile(filter: {relativeDirectory: {eq: "meetups"}}) {
+    nodes {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }
-`
+}`

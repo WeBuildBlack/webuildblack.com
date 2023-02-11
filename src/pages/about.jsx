@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import Helmet from 'react-helmet'
 import className from 'classnames'
 
@@ -10,11 +10,11 @@ import styles from '../assets/scss/about.module.scss'
 
 export default function About({ data }) {
   const fullWidthImage = data.allFile.nodes.find(node =>
-    node.childImageSharp.fluid.src.includes('group-pic')
+    node.childImageSharp.gatsbyImageData.src.includes('group-pic')
   )
 
   const defaultHeadshot = data.allFile.nodes.find(node =>
-    node.childImageSharp.fluid.src.includes('man1')
+    node.childImageSharp.gatsbyImageData.src.includes('man1')
   )
 
   const wwhSectionClassName = className(
@@ -25,22 +25,18 @@ export default function About({ data }) {
   const { teamMembers } = data.allMarkdownRemark.nodes[0].frontmatter
   const teamCardMarkup = teamMembers.map(({ name, role, bio, imageName }) => {
     const teamMemberHeadshot = data.allFile.nodes.find(node =>
-      node.childImageSharp.fluid.src.includes(imageName)
+      node.childImageSharp.gatsbyImageData.src.includes(imageName)
     )
 
     const headshot =
       teamMemberHeadshot !== undefined
-        ? teamMemberHeadshot.childImageSharp.fluid
-        : defaultHeadshot.childImageSharp.fluid
+        ? teamMemberHeadshot.childImageSharp.gatsbyImageData
+        : defaultHeadshot.childImageSharp.gatsbyImageData
 
     return (
       <li className={styles.TeamMember}>
         <div className={styles.HeadshotWrapper}>
-          <Img
-            className={styles.Headshot}
-            fluid={headshot}
-            alt={`Headshot of ${name}`}
-          />
+          <GatsbyImage image={headshot} className={styles.Headshot} alt={`Headshot of ${name}`} />
         </div>
         <div className={styles.Info}>
           <p className={styles.Name}>{name}</p>
@@ -48,7 +44,7 @@ export default function About({ data }) {
           <p className={styles.Bio}>{bio}</p>
         </div>
       </li>
-    )
+    );
   })
 
   // Video will replace image in hero in v2
@@ -82,10 +78,9 @@ export default function About({ data }) {
               </p>
             </div>
             <div className={styles.VideoContainer}>
-              <Img
-                className={styles.VideoThumbnail}
-                fluid={fullWidthImage.childImageSharp.fluid}
-              />
+              <GatsbyImage
+                image={fullWidthImage.childImageSharp.gatsbyImageData}
+                className={styles.VideoThumbnail} />
             </div>
           </div>
         </section>
@@ -123,31 +118,27 @@ export default function About({ data }) {
         </section>
       </main>
     </PageContainer>
-  )
+  );
 }
 
-export const query = graphql`
-  query About {
-    allMarkdownRemark(filter: { frontmatter: { page: { eq: "about" } } }) {
-      nodes {
-        frontmatter {
-          teamMembers {
-            bio
-            name
-            role
-            imageName
-          }
-        }
-      }
-    }
-    allFile(filter: { relativeDirectory: { eq: "about" } }) {
-      nodes {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
+export const query = graphql`query About {
+  allMarkdownRemark(filter: {frontmatter: {page: {eq: "about"}}}) {
+    nodes {
+      frontmatter {
+        teamMembers {
+          bio
+          name
+          role
+          imageName
         }
       }
     }
   }
-`
+  allFile(filter: {relativeDirectory: {eq: "about"}}) {
+    nodes {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+    }
+  }
+}`

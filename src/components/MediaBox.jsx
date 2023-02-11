@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import classnames from 'classnames'
 
 export default function MediaBox({ hero, children, image, altText }) {
@@ -15,7 +15,7 @@ export default function MediaBox({ hero, children, image, altText }) {
   }
 
   const imageMarkup = image ? (
-    <Img className={imageClassName} {...imageProps} />
+    <GatsbyImage className={imageClassName} {...imageProps} />
   ) : null
 
   return (

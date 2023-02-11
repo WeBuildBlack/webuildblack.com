@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react'
 import Helmet from 'react-helmet'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { graphql } from 'gatsby'
 
 import { PageContainer } from '../../../components'
@@ -10,19 +10,19 @@ import styles from '../../../assets/scss/mavens.module.scss'
 
 export default function Mavens({ data }) {
   const heroImage = data.allFile.nodes.find(node =>
-    node.childImageSharp.fluid.src.includes('crowd-wideview')
+    node.childImageSharp.gatsbyImageData.src.includes('crowd-wideview')
   )
 
   const goalImageOne = data.allFile.nodes.find(node =>
-    node.childImageSharp.fluid.src.includes('stage-panel')
+    node.childImageSharp.gatsbyImageData.src.includes('stage-panel')
   )
 
   const goalImageTwo = data.allFile.nodes.find(node =>
-    node.childImageSharp.fluid.src.includes('candid-crowd')
+    node.childImageSharp.gatsbyImageData.src.includes('candid-crowd')
   )
 
   const goalImageThree = data.allFile.nodes.find(node =>
-    node.childImageSharp.fluid.src.includes('stage-fireside')
+    node.childImageSharp.gatsbyImageData.src.includes('stage-fireside')
   )
 
   return (
@@ -41,11 +41,10 @@ export default function Mavens({ data }) {
         </div>
         <div className={styles.HeroImageBlock}>
           <div className={styles.HeroImageOverlay} />
-          <Img
+          <GatsbyImage
+            image={heroImage.childImageSharp.gatsbyImageData}
             className={styles.HeroImage}
-            fluid={heroImage.childImageSharp.fluid}
-            alt=""
-          />
+            alt="" />
         </div>
       </header>
       <main className={styles.Main}>
@@ -76,11 +75,10 @@ export default function Mavens({ data }) {
               </p>
             </div>
             <div className={styles.GoalImageWrapper}>
-              <Img
+              <GatsbyImage
+                image={goalImageOne.childImageSharp.gatsbyImageData}
                 className={styles.GoalImage}
-                fluid={goalImageOne.childImageSharp.fluid}
-                alt=""
-              />
+                alt="" />
             </div>
           </div>
 
@@ -96,11 +94,10 @@ export default function Mavens({ data }) {
               </p>
             </div>
             <div className={styles.GoalImageWrapper}>
-              <Img
+              <GatsbyImage
+                image={goalImageTwo.childImageSharp.gatsbyImageData}
                 className={styles.GoalImage}
-                fluid={goalImageTwo.childImageSharp.fluid}
-                alt=""
-              />
+                alt="" />
             </div>
           </div>
 
@@ -115,11 +112,10 @@ export default function Mavens({ data }) {
               </p>
             </div>
             <div className={styles.GoalImageWrapper}>
-              <Img
+              <GatsbyImage
+                image={goalImageThree.childImageSharp.gatsbyImageData}
                 className={styles.GoalImage}
-                fluid={goalImageThree.childImageSharp.fluid}
-                alt=""
-              />
+                alt="" />
             </div>
           </div>
         </div>
@@ -155,19 +151,15 @@ export default function Mavens({ data }) {
         </div> */}
       </main>
     </PageContainer>
-  )
+  );
 }
 
-export const query = graphql`
-  query Mavens {
-    allFile(filter: { relativeDirectory: { eq: "mavens" } }) {
-      nodes {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
+export const query = graphql`query Mavens {
+  allFile(filter: {relativeDirectory: {eq: "mavens"}}) {
+    nodes {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }
-`
+}`

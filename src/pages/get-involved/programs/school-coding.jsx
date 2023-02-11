@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react'
 import Helmet from 'react-helmet'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { graphql } from 'gatsby'
 
 import { PageContainer } from '../../../components'
@@ -10,7 +10,7 @@ import styles from '../../../assets/scss/mavens.module.scss'
 
 export default function Showcase({ data }) {
   const heroImage = data.allFile.nodes.find(node =>
-    node.childImageSharp.fluid.src.includes('70')
+    node.childImageSharp.gatsbyImageData.src.includes('70')
   )
 
   return (
@@ -19,11 +19,10 @@ export default function Showcase({ data }) {
       <header className={styles.Hero}>
         <div className={styles.HeroImageBlock}>
           <div className={styles.HeroImageOverlay} />
-          <Img
+          <GatsbyImage
+            image={heroImage.childImageSharp.gatsbyImageData}
             className={styles.HeroImage}
-            fluid={heroImage.childImageSharp.fluid}
-            alt=""
-          />
+            alt="" />
         </div>
       </header>
       <main className={styles.Main}>
@@ -38,19 +37,15 @@ export default function Showcase({ data }) {
         </div>
       </main>
     </PageContainer>
-  )
+  );
 }
 
-export const query = graphql`
-  query SchoolCoding {
-    allFile(filter: { relativeDirectory: { eq: "schoolcoding" } }) {
-      nodes {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
+export const query = graphql`query SchoolCoding {
+  allFile(filter: {relativeDirectory: {eq: "schoolcoding"}}) {
+    nodes {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }
-`
+}`

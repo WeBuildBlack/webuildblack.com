@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import classNames from 'classnames'
 
 import styles from './Hero.module.scss'
@@ -22,7 +22,7 @@ export default function Hero({
   const imageMarkup = imageSrc ? (
     <div className={styles.ImageWrapper}>
       <div className={styles.ImageOverlay} />
-      <Img className={styles.Image} fluid={imageSrc} alt={imageAltText} />
+      <GatsbyImage image={imageSrc} className={styles.Image} alt={imageAltText} />
     </div>
   ) : null
 

@@ -1,6 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
-import Img from "gatsby-image";
+import {GatsbyImage as Img} from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 import className from "classnames";
 
@@ -10,17 +10,17 @@ import styles from "../../assets/scss/partner.module.scss";
 
 export default function Partner({ data }) {
   const fullWidthImage = data.allFile.nodes.find((node) =>
-    node.childImageSharp.fluid.src.includes("swag")
+    node.childImageSharp.gatsbyImageData.src.includes("swag")
   );
 
   const partnerLogos = data.allFile.nodes.filter((node) =>
-    node.childImageSharp.fluid.src.includes("logo")
+    node.childImageSharp.gatsbyImageData.src.includes("logo")
   );
 
   const logoMarkup = partnerLogos
     .sort((a, b) => {
-      const img1 = a.childImageSharp.fluid.originalName.toUpperCase();
-      const img2 = b.childImageSharp.fluid.originalName.toUpperCase();
+      const img1 = a.childImageSharp.gatsbyImageData.originalName.toUpperCase();
+      const img2 = b.childImageSharp.gatsbyImageData.originalName.toUpperCase();
 
       if (img1 < img2) {
         return -1;
@@ -36,7 +36,7 @@ export default function Partner({ data }) {
       <div className={styles.LogoWrapper}>
         <Img
           className={styles.Logo}
-          fluid={logo.childImageSharp.fluid}
+          fluid={logo.childImageSharp.gatsbyImageData}
           alt=""
         />
       </div>
@@ -60,7 +60,7 @@ export default function Partner({ data }) {
           <div className={styles.HeroImageOverlay} />
           <Img
             className={styles.HeroImage}
-            fluid={fullWidthImage.childImageSharp.fluid}
+            fluid={fullWidthImage.childImageSharp.gatsbyImageData}
             alt="Mavens I/O Black Women in Tech Conference Swag bags"
           />
         </div>
@@ -168,17 +168,12 @@ export default function Partner({ data }) {
   );
 }
 
-export const query = graphql`
-  query Partner {
-    allFile(filter: { relativeDirectory: { eq: "partner" } }) {
-      nodes {
-        childImageSharp {
-          fluid {
-            originalName
-            ...GatsbyImageSharpFluid
-          }
-        }
+export const query = graphql`query Partner {
+  allFile(filter: {relativeDirectory: {eq: "partner"}}) {
+    nodes {
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
       }
     }
   }
-`;
+}`;
