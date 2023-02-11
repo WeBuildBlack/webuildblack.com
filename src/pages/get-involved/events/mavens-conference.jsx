@@ -137,7 +137,7 @@ export default function Mavens({ data }) {
           </div>
         </div>
 
-        <div className={styles.ActionSection}>
+        {/* <div className={styles.ActionSection}>
           <h2 className={styles.SectionHeading}>
             {`We're taking Mavens I/O global`}
           </h2>
@@ -152,7 +152,7 @@ export default function Mavens({ data }) {
             </a>{' '}
             our virtual 2021 event
           </p>
-        </div>
+        </div> */}
       </main>
     </PageContainer>
   )

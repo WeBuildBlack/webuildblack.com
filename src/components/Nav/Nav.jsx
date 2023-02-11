@@ -10,6 +10,7 @@ export default function Nav() {
   const aboutRef = useRef(null);
   const getInvolvedRef = useRef(null);
   const makeAnImpactRef = useRef(null);
+  const shopRef = useRef(null);
   const donateRef = useRef(null);
   const mavensRef = useRef(null);
   const meetupsRef = useRef(null);
@@ -19,19 +20,18 @@ export default function Nav() {
   const partnerRef = useRef(null);
   const volunteerRef = useRef(null);
   const schoolRef = useRef(null);
-  const navItemRefs = [aboutRef, getInvolvedRef, makeAnImpactRef, donateRef];
+  const navItemRefs = [aboutRef, getInvolvedRef, makeAnImpactRef, shopRef, donateRef];
   const getInvolvedRefs = [mavensRef, meetupsRef, showcaseRef, slackRef, schoolRef];
   const makeAnImpactRefs = [hireRef, partnerRef, volunteerRef];
+
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState("");
   const [activeMenuItemIndex, setActiveMenuItemIndex] = useState(null);
   const [activeSubMenuItemIndex, setActiveSubMenuItemIndex] = useState(null);
-
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const toggleMobileMenu = useCallback(() => {
     setMobileMenuOpen((mobileMenuOpen) => !mobileMenuOpen);
   });
-
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState("");
 
   const handleFocusMenuItem = useCallback(
     (event) => {
@@ -317,7 +317,7 @@ export default function Nav() {
                 tabIndex={-1}
                 ref={mavensRef}
                 data-href="/get-involved/events/mavens-conference"
-                to="https://mavens-io.com"
+                to="/get-involved/events/mavens-conference"
               >
                 Mavens I/O
               </Link>
@@ -344,8 +344,8 @@ export default function Nav() {
                 data-index={2}
                 tabIndex={-1}
                 ref={showcaseRef}
-                data-href="/fast-track"
-                to="/fast-track"
+                data-href="/get-involved/programs/fast-track"
+                to="/get-involved/programs/fast-track"
               >
                 Fast Track
               </Link>
@@ -460,6 +460,23 @@ export default function Nav() {
           </ul>
         </div>
       </li>
+      <li role="none" className={styles.MenuItem}>
+        <button
+          type="button"
+          className={styles.MenuLink}
+          data-navItem="Shop"
+          data-index={3}
+          data-href="/shop"
+          role="menuitem"
+          tabIndex={-1}
+          onClick={handleNavigate}
+          onTouchStart={handleNavigate}
+          onFocus={handleFocusMenuItem}
+          ref={shopRef}
+        >
+          Shop
+        </button>
+      </li>
       <li className={styles.MenuItem} role="none">
         <form
           className={styles.DonateForm}
@@ -473,7 +490,7 @@ export default function Nav() {
             type="submit"
             className={donateButtonClassName}
             data-navItem="Donate"
-            data-index={3}
+            data-index={4}
             ref={donateRef}
             onFocus={handleFocusMenuItem}
             tabIndex={-1}
@@ -494,7 +511,7 @@ export default function Nav() {
   );
 
   return (
-    <nav className={styles.Nav} aria-label="We Build Black Site navigation">
+    <nav className={styles.Nav} aria-label="We Build Black site navigation">
       <div className={styles.BrandWrapper}>
         <Link to="/" className={styles.BrandLink} data-navItem="Home">
           <img className={styles.Logo} src={wbbWordmark} alt="We Build Black" />
