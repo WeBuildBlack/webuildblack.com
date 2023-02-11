@@ -6,7 +6,7 @@ import className from "classnames";
 
 import { PageContainer } from "../../components";
 
-import styles from "../../assets/scss/partner.module.scss";
+import * as styles from "../../assets/scss/partner.module.scss";
 
 export default function Partner({ data }) {
   const fullWidthImage = data.allFile.nodes.find((node) =>

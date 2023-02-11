@@ -6,7 +6,7 @@ import { graphql } from 'gatsby'
 
 import { PageContainer } from '../../../components'
 
-import styles from '../../../assets/scss/mavens.module.scss'
+import * as styles from '../../../assets/scss/mavens.module.scss'
 
 export default function Showcase({ data }) {
   const heroImage = data.allFile.nodes.find(node =>
@@ -29,8 +29,8 @@ export default function Showcase({ data }) {
         <div className={styles.GoalSection}>
           <h2 className={styles.SectionHeading}>Crowns of Code: School Coding Program</h2>
           <p className={styles.IntroText}>
-            Crowns of Code is our youth education program where we teach programming in 
-            middle and high schools. Our students will learn to build tech from video games 
+            Crowns of Code is our youth education program where we teach programming in
+            middle and high schools. Our students will learn to build tech from video games
             to e-commerce websites. The best about all of this is it's absolutely free to the school!
             If you'd like to bring this program to your child's school reachnout to us at info@webuildblack.com
           </p>

@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 import wbbWordmark from "../../assets/images/wbb-wordmark-white-no-bg.svg";
 
-import styles from "./Nav.module.scss";
+import * as styles from "./Nav.module.scss";
 
 export default function Nav() {
   const aboutRef = useRef(null);

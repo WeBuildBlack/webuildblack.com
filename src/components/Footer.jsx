@@ -4,7 +4,7 @@ import { navigate, Link } from 'gatsby'
 
 import wbbLogo from '../assets/images/wbb-logo-square-no-bg.svg'
 
-import styles from '../assets/scss/footer.module.scss'
+import * as styles from '../assets/scss/footer.module.scss'
 
 export default function Footer() {
   const copyrightMarkup = (

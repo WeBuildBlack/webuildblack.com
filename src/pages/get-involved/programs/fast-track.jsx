@@ -13,7 +13,7 @@ import macbookIphone from '../../../assets/images/macbook-iphone.jpeg'
 import mentor from '../../../assets/images/mentor2.png'
 import womanCoding from '../../../assets/images/woman-coding.jpg'
 
-import styles from '../../../assets/scss/fast-track.module.scss'
+import * as styles from '../../../assets/scss/fast-track.module.scss'
 import 'rc-collapse/assets/index.css';
 
 export default function FastTrack({ data }) {

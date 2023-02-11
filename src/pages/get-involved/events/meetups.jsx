@@ -7,7 +7,7 @@ import classNames from 'classnames'
 
 import { PageContainer } from '../../../components'
 
-import styles from '../../../assets/scss/meetups.module.scss'
+import * as styles from '../../../assets/scss/meetups.module.scss'
 
 export default function Meetups({ data }) {
   const heroImage = data.allFile.nodes.find(node =>

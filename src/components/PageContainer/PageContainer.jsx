@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Nav, Footer } from '..'
 
-import styles from './PageContainer.module.scss'
+import * as styles from './PageContainer.module.scss'
 
 export default function PageContainer({ children }) {
   return (

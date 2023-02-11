@@ -6,7 +6,7 @@ import className from 'classnames'
 
 import { PageContainer } from '../components'
 
-import styles from '../assets/scss/about.module.scss'
+import * as styles from '../assets/scss/about.module.scss'
 
 export default function About({ data }) {
   const fullWidthImage = data.allFile.nodes.find(node =>

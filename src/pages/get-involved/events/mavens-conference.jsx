@@ -6,7 +6,7 @@ import { graphql } from 'gatsby'
 
 import { PageContainer } from '../../../components'
 
-import styles from '../../../assets/scss/mavens.module.scss'
+import * as styles from '../../../assets/scss/mavens.module.scss'
 
 export default function Mavens({ data }) {
   const heroImage = data.allFile.nodes.find(node =>
