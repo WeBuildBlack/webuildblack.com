@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import { GatsbyImage } from "gatsby-plugin-image";
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import Helmet from 'react-helmet'
 import className from 'classnames'
 
@@ -9,8 +9,9 @@ import { PageContainer } from '../components'
 import * as styles from '../assets/scss/about.module.scss'
 
 export default function About({ data }) {
+  console.log(data.allFile.nodes)
   const fullWidthImage = data.allFile.nodes.find(node =>
-    node.childImageSharp.gatsbyImageData.src.includes('group-pic')
+   node.childImageSharp.gatsbyImageData.src.includes('group-pic')
   )
 
   const defaultHeadshot = data.allFile.nodes.find(node =>
