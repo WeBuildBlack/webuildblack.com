@@ -466,7 +466,7 @@ export default function Nav() {
           className={styles.MenuLink}
           data-navItem="Shop"
           data-index={3}
-          href="http://shop.webuildblack.com"
+          data-href="http://shop.webuildblack.com"
           role="menuitem"
           tabIndex={-1}
           onClick={handleNavigate}
