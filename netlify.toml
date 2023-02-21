@@ -31,4 +31,4 @@
 [[redirects]]
   from = "/shop"
   to = "https://we-build-black.myshopify.com/"
-  status = 301
+  status = 200
